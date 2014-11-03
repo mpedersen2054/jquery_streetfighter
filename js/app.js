@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-  
+
   var ryuStill = $('.ryu-still'),
       ryuReady = $('.ryu-ready'),
       ryuThrowing = $('.ryu-throwing'),
@@ -18,8 +18,15 @@ $(document).ready(function () {
     // play hadouken sound
     ryuReady.hide();
     ryuThrowing.show();
-    hadouken.show();
-    // animate hadouken to the right of the screen
+    hadouken.show()
+    .animate(
+      {'left': '1100px'},
+      500,
+      function () {
+        $(this).hide();
+        $(this).css('left', '600px');
+      }
+    );
   })
   .on('mouseup', function () {
     ryuThrowing.hide();
