@@ -15,10 +15,10 @@ $(document).ready(function () {
     ryuReady.hide();
   })
   .on('mousedown', function () {
-    // play hadouken sound
+    playHadoukenSound();
     ryuReady.hide();
     ryuThrowing.show();
-    hadouken.show()
+    hadouken.finish().show()
     .animate(
       {'left': '1100px'},
       500,
@@ -34,3 +34,9 @@ $(document).ready(function () {
   });
 
 });
+
+function playHadoukenSound () {
+  $('#hadouken-sound')[0].volume = 0.5;
+  $('#hadouken-sound')[0].load();
+  $('#hadouken-sound')[0].play();
+}
