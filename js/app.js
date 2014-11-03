@@ -24,7 +24,7 @@ $(document).ready(function () {
       500,
       function () {
         $(this).hide();
-        $(this).css('left', '600px');
+        $(this).css('left', '500px');
       }
     );
   })
@@ -36,7 +36,9 @@ $(document).ready(function () {
 });
 
 function playHadoukenSound () {
-  $('#hadouken-sound')[0].volume = 0.5;
-  $('#hadouken-sound')[0].load();
-  $('#hadouken-sound')[0].play();
+  var hadoukenSound = $('#hadouken-sound')[0];
+
+  hadoukenSound.volume = 0.5;
+  hadoukenSound.load();
+  hadoukenSound.play();
 }
