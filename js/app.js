@@ -28,7 +28,6 @@
       }
     );
   })
-
   .on('mouseup', function () {
     $ryuThrowing.hide();
     $ryuReady.show();
